@@ -1,0 +1,72 @@
+{
+  "name": "@automattic/gin",
+  "version": "1.0.0",
+  "description": "Library that handles state management, business logic, and api calls in an easy-to-use manner.",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "NODE_ENV=production npx parcel build src/index.ts --target node --bundle-node-modules --no-content-hash --no-source-maps --experimental-scope-hoisting && npx tsc -p ./tsconfig.json",
+    "dev": "npx parcel watch src/index.ts --target node",
+    "declarations": "NODE_ENV=production npx tsc -p ./tsconfig.json",
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "test-coverage": "jest --coverage",
+    "see-coverage": "open coverage/lcov-report/index.html"
+  },
+  "keywords": [
+    "state",
+    "management",
+    "fetch",
+    "api",
+    "business",
+    "logic",
+    "redux",
+    "react",
+    "spa"
+  ],
+  "author": "Automattic Inc.",
+  "license": "MIT",
+  "dependencies": {
+    "shortid": "^2.2.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.9.0",
+    "@types/node": "^13.1.7",
+    "@typescript-eslint/eslint-plugin": "^2.16.0",
+    "@typescript-eslint/parser": "^2.16.0",
+    "babel-jest": "^24.9.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "parcel-bundler": "^1.12.4",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.js?(x)",
+      "**/?(*.)(spec|test).js?(x)",
+      "**/tests.(js|jsx|ts|tsx)",
+      "**/*.tests.(js|jsx|ts|tsx)"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.(js|jsx|ts|tsx)"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/jest-setup.js"
+    ],
+    "coverageDirectory": "./coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  }
+}
