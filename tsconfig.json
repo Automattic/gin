@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "sourceMap": false,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": ["DOM", "ESNext"],
+    "emitDeclarationOnly": true,
+    "types": ["node", "jest"],
+    "declarationDir": "./dist",
+  },
+  "exclude": [
+    "node_modules",
+    ".cache",
+    "*/**/__tests__/**",
+    "./dist/**"
+  ]
+}
