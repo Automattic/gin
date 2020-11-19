@@ -260,8 +260,8 @@ Let's use the following example (same as above):
 
 ```tsx
 // Parent Component
-import Store from 'react-gin';
-import { deed } from 'gin';
+import Store from '@automattic/react-gin';
+import { deed } from '@automattic/gin';
 const initialCargo = {
   count: 0,
 };
@@ -278,7 +278,7 @@ in the child component:
 
 ```tsx
 // Child Component
-import { useStore } from 'react-gin';
+import { useStore } from '@automattic/react-gin';
 
 export const Child = () => {
   const { deeds, cargo } = useStore();
@@ -1320,7 +1320,7 @@ Prepares `gin` to allow use of `stub.stores`
 **Example Usage**
 
 ```ts
-import { mockStores } from 'gin';
+import { mockStores } from '@automattic/gin';
 
 // recommended usage
 beforeAll(mockStores);
@@ -1341,7 +1341,7 @@ Reverts `gin` for normal use
 **Example Usage**
 
 ```ts
-import { mockStores, unmockStores } from 'gin';
+import { mockStores, unmockStores } from '@automattic/gin';
 
 // recommended usage
 beforeAll(mockStores);
